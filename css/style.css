@@ -6,6 +6,9 @@ body, html {
 body {
   background: #2b2b2b; }
 
+.global {
+  overflow: hidden; }
+
 button {
   cursor: pointer; }
 
@@ -73,7 +76,7 @@ h3 {
 
 .resumo-pedido-area {
   position: relative;
-  margin: 125px auto 50px auto; }
+  margin: 50px auto 50px auto; }
   .resumo-pedido-area .bordinha-nice {
     position: absolute;
     bottom: -6px;
