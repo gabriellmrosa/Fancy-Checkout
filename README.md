@@ -1,5 +1,5 @@
 # Fancy-Checkout
-A animated experience for your checkout !
+A animated experience for your desktop checkout !
 
 The first launch of a idea, be free to submit your improvements, let´s be open source!
 
