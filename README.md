@@ -3,7 +3,7 @@ A animated experience for your checkout !
 
 The first launch of a idea, be free to submit your improvements, let´s be open source!
 
-<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/0a248969833603.5b8f20f8988e6.gif">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/0a248969833603.5b8f20f8988e6.gif" width:600px; height:600px;>
 You can see: <a href="https://www.behance.net/gallery/69833603/FANCY-CHECKOUT">HERE</a>
 
 Thanks!
