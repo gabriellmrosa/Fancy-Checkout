@@ -1,66 +1,17 @@
-let $ = document.querySelector.bind(document)
+const $ = document.querySelector.bind(document)
 
-let btnComprar = document.querySelector('.btn-comprar')
-let maquininha = document.querySelector('.maquininha')
-let vaiSumirTodos = document.querySelectorAll('.vai-sumir')
-let vaiSumir = document.querySelector('.vai-sumir')
-let alturaAtual = maquininha.offsetHeight
+const vaiSumirTodos = document.querySelectorAll('.vai-sumir')
+const btnComprar = $('.btn-comprar')
+const maquininha = $('.maquininha')
+const vaiSumir = $('.vai-sumir')
+const alturaAtual = maquininha.offsetHeight
+const numeroCard = $('.numero-do-cartao-front')
+const nomeCard = $('.nome-front')
+const dataCard = $('.data-front')
+const flipper = $('.flipper')
+const cartaoback = $('.cartao-back')
 
-maquininha.style.height = `${alturaAtual}px`
-
-$('.numero-do-cartao-front').addEventListener('keyup', function (event) {
-  if (this.value.length > 3) {
-    $('.marca-cartao').classList.add('marca-cartao-entra')
-  }
-})
-
-btnComprar.addEventListener('click', function () {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-  })
-
-  let numeroCard = $('.numero-do-cartao-front').value
-  $('.numero-do-cartao-back').insertAdjacentHTML('afterbegin', numeroCard)
-
-  let nomeCard = $('.nome-front').value
-  $('.nome-back').insertAdjacentHTML('afterbegin', nomeCard)
-
-  let dataCard = $('.data-front').value
-  $('.data-back').insertAdjacentHTML('afterbegin', dataCard)
-
-  $('.card-area h2').classList.add('fadeOut')
-  $('.titulo-area').classList.add('fadeOut')
-  $('.button-area').classList.add('fadeOut')
-
-  let flipper = document.querySelector('.flipper')
-  let cartaoback = document.querySelector('.cartao-back')
-
-  flipper.classList.add('anima-flipper')
-  cartaoback.classList.add('anima-cartao-back')
-  maquininha.classList.add('animacao-maquininha')
-
-  $('.anima-cartao-back').addEventListener('animationend', function (event) {
-    vaiSumirTodos.forEach(function (vaiSumir) {
-      vaiSumir.style.animation = 'vaiSumir 300ms both'
-    })
-
-    vaiSumir.addEventListener('animationend', function (event) {
-      vaiSumirTodos.forEach(function (vaiSumir) {
-        vaiSumir.remove()
-      })
-
-      $('.total').style.cssText = 'padding:15px; border:2px solid rgba(255,255,255,0.7); border-radius:4px;'
-
-      maquininha.style.height = `100px`
-
-      parteDois()
-    }, false)
-  }, false)
-})
-
-function parteDois () {
+const parteDois = function () {
   maquininha.addEventListener('transitionend', function (event) {
     maquininha.style.cssText = `
     height:auto;
@@ -84,3 +35,48 @@ function parteDois () {
     $('.feedback-sucesso').style.cssText = 'opacity:1; transform: translate(-50%, -100%);'
   })
 }
+
+maquininha.style.height = `${alturaAtual}px`
+
+$('.numero-do-cartao-front').addEventListener('keyup', function (event) {
+  if (this.value.length > 3) {
+    $('.marca-cartao').classList.add('marca-cartao-entra')
+  }
+})
+
+btnComprar.addEventListener('click', function () {
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
+
+  $('.numero-do-cartao-back').insertAdjacentHTML('afterbegin', numeroCard.value)
+  $('.nome-back').insertAdjacentHTML('afterbegin', nomeCard.value)
+  $('.data-back').insertAdjacentHTML('afterbegin', dataCard.value)
+  $('.card-area h2').classList.add('fadeOut')
+  $('.titulo-area').classList.add('fadeOut')
+  $('.button-area').classList.add('fadeOut')
+
+  flipper.classList.add('anima-flipper')
+  cartaoback.classList.add('anima-cartao-back')
+  maquininha.classList.add('animacao-maquininha')
+
+  $('.anima-cartao-back').addEventListener('animationend', function (event) {
+    vaiSumirTodos.forEach(function (vaiSumir) {
+      vaiSumir.style.animation = 'vaiSumir 300ms both'
+    })
+
+    vaiSumir.addEventListener('animationend', function (event) {
+      vaiSumirTodos.forEach(function (vaiSumir) {
+        vaiSumir.remove()
+      })
+
+      $('.total').style.cssText = 'padding:15px; border:2px solid rgba(255,255,255,0.7); border-radius:4px;'
+
+      maquininha.style.height = `100px`
+
+      parteDois()
+    }, false)
+  }, false)
+})
