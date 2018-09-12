@@ -1,0 +1,23 @@
+{
+  "name": "fancy-checkout",
+  "version": "1.0.0",
+  "description": "A animated experience for your desktop checkout !",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch css/style.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriellamas/Fancy-Checkout.git"
+  },
+  "devDependencies": {
+    "sass": "^1.13.4"
+  },
+  "author": "Gabriel Lamas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriellamas/Fancy-Checkout/issues"
+  },
+  "homepage": "https://github.com/gabriellamas/Fancy-Checkout#readme"
+}
