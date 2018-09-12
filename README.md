@@ -1,7 +1,7 @@
 # Fancy-Checkout
 A animated experience for your desktop checkout !
 
-<p align="center">
+<p align="left">
     <img src="img/animation.gif" alt="Fancy checkout">
 </p>
 
