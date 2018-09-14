@@ -1,129 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Ensaio</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/style.css">
+    <title>Fancy Checkout</title>
+  </head>
 
-<body>
-  <div class="global">
-    <div class="resumo-pedido-area">
-      <div class="flex-area j-space-between titulo-area">
-        <h2>Resumo do pedido:</h2>
-      </div>
-      <div class="cartao maquininha">
-        <div class="flex-area j-space-between vai-sumir">
-          <p>1 Carrinho HotWheels</p>
-          <p>R$ 230,00</p>
+  <body>
+    <div class="global">
+      <div class="resumo-pedido-area">
+        <div id="titulo-area" class="flex-area j-space-between titulo-area">
+          <h2>Resumo do pedido:</h2>
         </div>
-
-        <div class="flex-area j-space-between vai-sumir">
-          <p>2 Lego Play Party</p>
-          <p>R$ 73,80</p>
-        </div>
-
-        <div class="flex-area j-space-between vai-sumir">
-          <p>1 God Of War</p>
-          <p>R$ 159,90</p>
-        </div>
-
-        <div class="total flex-area j-space-between">
-          <p>Total</p>
-          <h4>R$ 463,70</h4>
-        </div>
-
-        <div class="loading-area">
-          <div class="feedback-sucesso">
-            <h3 class="compra-sucesso">Compra efetuada com sucesso!</h3>
+        <div id="maquininha" class="cartao maquininha">
+          <div class="flex-area j-space-between vai-sumir">
+            <p>1 Carrinho HotWheels</p>
+            <p>R$ 230,00</p>
           </div>
-        </div>
-      </div>
 
-      <div class="bordinha-nice"></div>
-    </div>
+          <div class="flex-area j-space-between vai-sumir">
+            <p>2 Lego Play Party</p>
+            <p>R$ 73,80</p>
+          </div>
 
-    <div class="card-area">
-      <h2>Finalizar compra:</h2>
-      <form>
-        <div class="flip-container">
-          <div class="flipper">
-            <div class="cartao cartao-front">
-              <div class="flex-area j-space-between a-items-center header-cartao a-items-start">
-                <h3>Dados do cartão</h3>
-                <img class="marca-cartao" src="img/visa-logo.png" alt="Logo do seu cartão de crédito" height='30px'>
-              </div>
+          <div class="flex-area j-space-between vai-sumir">
+            <p>1 God Of War</p>
+            <p>R$ 159,90</p>
+          </div>
 
-              <label>
-                <span>Número do cartão</span>
-                <div class="input-area">
-                  <i class="material-icons">payment</i>
-                  <input type="text" class="numero-do-cartao-front">
-                </div>
-              </label>
+          <div id="total" class="total flex-area j-space-between">
+            <p>Total</p>
+            <h4>R$ 463,70</h4>
+          </div>
 
-              <label>
-                <span>Nome que está escrito no cartão</span>
-                <div class="input-area">
-                  <input type="text" class="nome-front">
-                </div>
-              </label>
-
-              <div class="flex-area j-space-between">
-                <label class="w-48">
-                  <span>Data de validade</span>
-                  <div class="input-area">
-                    <input type="text" class="data-front">
-                  </div>
-                </label>
-
-                <label class="w-48">
-                  <span>CVV</span>
-                  <div class="input-area">
-                    <input type="text" >
-                  </div>
-                </label>
-              </div>
-            </div>
-
-            <div class="cartao cartao-back">
-              <div class="flex-area j-space-between a-items-center header-cartao">
-                <img src="https://www.visa.com.br/content/dam/VCOM/nav-assets/logo.png" alt="Logo do seu cartão de crédito" height='30px'>
-              </div>
-
-              <label>
-                <h3 class="numero-do-cartao-back"></h3>
-              </label>
-
-              <label>
-                <h3 class="nome-back"></h3>
-              </label>
-
-              <div class="flex-area j-space-between a-items-start">
-                <label class="w-48">
-                  <h3 class="data-back"></h3>
-                </label>
-
-                <img class="chip" src="img/chip.png" alt="chip cartão">
-              </div>
+          <div class="loading-area">
+            <div class="feedback-sucesso">
+              <h3 class="compra-sucesso">Compra efetuada com sucesso!</h3>
             </div>
           </div>
         </div>
 
-        <div class="flex-area j-center button-area">
-          <button type="button" class="btn-comprar">
-            <span>Confirmar Pagamento</span>
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
+        <div class="bordinha-nice"></div>
+      </div>
 
-  <script src="js/custom.js"></script>
-</body>
+      <div id="card-area" class="card-area">
+        <h2>Finalizar compra:</h2>
+        <form>
+          <div class="flip-container">
+            <div id="flipper" class="flipper">
+              <div class="cartao cartao-front">
+                <div class="flex-area j-space-between a-items-center header-cartao a-items-start">
+                  <h3 style="white-space: nowrap">Dados do cartão</h3>
+                  <img id="marca-cartao" class="marca-cartao" alt="Logo do seu cartão de crédito" height="30px">
+                </div>
+
+                <label>
+                  <span>Número do cartão</span>
+                  <div class="input-area">
+                    <i class="material-icons">payment</i>
+                    <input type="text" id="numero-do-cartao-front" class="numero-do-cartao-front">
+                  </div>
+                </label>
+
+                <label>
+                  <span>Nome que está escrito no cartão</span>
+                  <div class="input-area">
+                    <input type="text" id="nome-front" class="nome-front" style="text-transform: uppercase" autocomplete="off">
+                  </div>
+                </label>
+
+                <div class="flex-area j-space-between">
+                  <label class="w-48">
+                    <span>Data de validade</span>
+                    <div class="input-area">
+                      <input type="text" id="data-front" class="data-front" maxlength="7">
+                    </div>
+                  </label>
+
+                  <label class="w-48">
+                    <span>CVV</span>
+                    <div class="input-area">
+                      <input type="text" id="cvv-front" class="cvv-front" maxlength="4">
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div id="cartao-back" class="cartao cartao-back">
+                <div class="flex-area j-space-between a-items-center header-cartao">
+                  <img src="https://www.visa.com.br/content/dam/VCOM/nav-assets/logo.png" alt="Logo do seu cartão de crédito" height='30px'>
+                </div>
+
+                <label>
+                  <h3 id="numero-do-cartao-back" class="numero-do-cartao-back"></h3>
+                </label>
+
+                <label>
+                  <h3 id="nome-back" class="nome-back"></h3>
+                </label>
+
+                <div class="flex-area j-space-between a-items-start">
+                  <label class="w-48">
+                    <h3 id="data-back" class="data-back"></h3>
+                  </label>
+
+                  <img class="chip" src="src/img/chip.png" alt="chip cartão">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="button-area" class="flex-area j-center button-area">
+            <button type="button" id="btn-comprar" class="btn-comprar">
+              <span>Confirmar Pagamento</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/dist/app.js"></script>
+    <script src="/dist/vendors.js"></script>
+  </body>
 </html>
