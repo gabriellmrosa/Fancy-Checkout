@@ -45,7 +45,6 @@ Open the [index.html](./index.html) file to see the full example.
 
 - [ ] Add form validation
 - [ ] Webpack config refactor
-- [ ] Pre-push hook
 
 ## Contributing
 
