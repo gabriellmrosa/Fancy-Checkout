@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/style.css">
+    <link rel="stylesheet" href="/dist/css/fancy-checkout.css">
     <title>Fancy Checkout</title>
   </head>
 
@@ -38,38 +38,38 @@
           </div>
 
           <div class="loading-area">
-            <div class="feedback-sucesso">
+            <div id="feedback-sucesso" class="feedback-sucesso">
               <h3 class="compra-sucesso">Compra efetuada com sucesso!</h3>
             </div>
           </div>
         </div>
 
-        <div class="bordinha-nice"></div>
+        <div id="bordinha-nice" class="bordinha-nice"></div>
       </div>
 
       <div id="card-area" class="card-area">
-        <h2>Finalizar compra:</h2>
+        <h2 id="card-area-titulo">Finalizar compra:</h2>
         <form>
           <div class="flip-container">
             <div id="flipper" class="flipper">
               <div class="cartao cartao-front">
                 <div class="flex-area j-space-between a-items-center header-cartao a-items-start">
                   <h3 style="white-space: nowrap">Dados do cartão</h3>
-                  <img id="marca-cartao" class="marca-cartao" alt="Logo do seu cartão de crédito" height="30px">
+                  <img src="dist/img/flags/visa.png" id="marca-cartao" class="marca-cartao" alt="Logo do seu cartão de crédito" height="30px">
                 </div>
 
                 <label>
                   <span>Número do cartão</span>
                   <div class="input-area">
                     <i class="material-icons">payment</i>
-                    <input type="text" id="numero-do-cartao-front" class="numero-do-cartao-front">
+                    <input type="text" id="numero-do-cartao-front" class="numero-do-cartao-front" value="1234">
                   </div>
                 </label>
 
                 <label>
                   <span>Nome que está escrito no cartão</span>
                   <div class="input-area">
-                    <input type="text" id="nome-front" class="nome-front" style="text-transform: uppercase" autocomplete="off">
+                    <input type="text" id="nome-front" class="nome-front" style="text-transform: uppercase" autocomplete="off" value="Fulano da silva">
                   </div>
                 </label>
 
@@ -77,14 +77,14 @@
                   <label class="w-48">
                     <span>Data de validade</span>
                     <div class="input-area">
-                      <input type="text" id="data-front" class="data-front" maxlength="7">
+                      <input type="text" id="data-front" class="data-front" maxlength="7" value="12/2021">
                     </div>
                   </label>
 
                   <label class="w-48">
                     <span>CVV</span>
                     <div class="input-area">
-                      <input type="text" id="cvv-front" class="cvv-front" maxlength="4">
+                      <input type="text" id="cvv-front" class="cvv-front" maxlength="4" value="123">
                     </div>
                   </label>
                 </div>
@@ -92,7 +92,7 @@
 
               <div id="cartao-back" class="cartao cartao-back">
                 <div class="flex-area j-space-between a-items-center header-cartao">
-                  <img src="https://www.visa.com.br/content/dam/VCOM/nav-assets/logo.png" alt="Logo do seu cartão de crédito" height='30px'>
+                  <img src="/dist/img/flags/visa.png" alt="Logo do seu cartão de crédito" height='30px'>
                 </div>
 
                 <label>
@@ -108,7 +108,7 @@
                     <h3 id="data-back" class="data-back"></h3>
                   </label>
 
-                  <img class="chip" src="src/img/chip.png" alt="chip cartão">
+                  <img class="chip" src="dist/img/chip.png" alt="chip cartão">
                 </div>
               </div>
             </div>
@@ -123,7 +123,6 @@
       </div>
     </div>
 
-    <script src="/dist/app.js"></script>
-    <script src="/dist/vendors.js"></script>
+    <script src="/dist/js/fancy-checkout.js"></script>
   </body>
 </html>

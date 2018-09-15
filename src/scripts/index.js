@@ -1,2 +1,1 @@
-import './checkout'
-import './handler'
+import './triggers'

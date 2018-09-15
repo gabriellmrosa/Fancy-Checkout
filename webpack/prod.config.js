@@ -2,17 +2,30 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const { name } = require('../package.json')
+
+// the path(s) that should be cleaned
+let pathsToClean = [
+  'dist'
+]
+
+// the clean options to use
+let cleanOptions = {
+  root: path.join(__dirname, '../'),
+  exclude: ['img'],
+  verbose: true,
+  dry: false
+}
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   devtool: 'source-map',
   entry: {
-    app: './src/index.js',
-    vendors: './src/vendors.js'
+    app: './src/index.js'
   },
   output: {
     path: path.join(__dirname, '../', 'dist'),
-    filename: `[name].js`,
+    filename: path.join('js', `${name}.js`),
     publicPath: '/dist/'
   },
   module: {
@@ -38,9 +51,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(pathsToClean, cleanOptions),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: path.join('css', `${name}.css`)
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
