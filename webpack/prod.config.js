@@ -4,13 +4,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const { name } = require('../package.json')
 
-// the path(s) that should be cleaned
-let pathsToClean = [
-  'dist'
-]
+const pathsToClean = ['dist']
 
-// the clean options to use
-let cleanOptions = {
+const cleanOptions = {
   root: path.join(__dirname, '../'),
   exclude: ['img'],
   verbose: true,
@@ -18,7 +14,8 @@ let cleanOptions = {
 }
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
+  target: 'web',
   devtool: 'source-map',
   entry: {
     app: './src/index.js'
@@ -26,7 +23,9 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../', 'dist'),
     filename: path.join('js', `${name}.js`),
-    publicPath: '/dist/'
+    publicPath: '/dist/',
+    libraryTarget: 'var',
+    library: 'FancyCheckout'
   },
   module: {
     rules: [
@@ -41,12 +40,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+        use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } }
       }
     ]
   },

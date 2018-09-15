@@ -49,7 +49,8 @@
 
       <div id="card-area" class="card-area">
         <h2 id="card-area-titulo">Finalizar compra:</h2>
-        <form>
+
+        <form novalidate>
           <div class="flip-container">
             <div id="flipper" class="flipper">
               <div class="cartao cartao-front">
@@ -62,7 +63,7 @@
                   <span>Número do cartão</span>
                   <div class="input-area">
                     <i class="material-icons">payment</i>
-                    <input type="text" id="numero-do-cartao-front" class="numero-do-cartao-front" value="1234">
+                    <input type="text" id="numero-do-cartao-front" class="numero-do-cartao-front" value="400">
                   </div>
                 </label>
 
@@ -84,7 +85,7 @@
                   <label class="w-48">
                     <span>CVV</span>
                     <div class="input-area">
-                      <input type="text" id="cvv-front" class="cvv-front" maxlength="4" value="123">
+                      <input type="number" id="cvv-front" class="cvv-front" maxlength="4" value="123">
                     </div>
                   </label>
                 </div>
@@ -124,5 +125,17 @@
     </div>
 
     <script src="/dist/js/fancy-checkout.js"></script>
+    <script>
+      const buyButton = document.getElementById('btn-comprar');
+      buyButton.addEventListener('click', function () {
+        buyButton.innerHTML = 'Processing...';
+
+        // fake api request
+        window.setTimeout(function () {
+          // success return
+          FancyCheckout.init();
+        }, 2000);
+      });
+    </script>
   </body>
 </html>

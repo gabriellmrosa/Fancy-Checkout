@@ -15,6 +15,7 @@ const cleanOptions = {
 
 module.exports = {
   mode: 'development',
+  target: 'web',
   devtool: 'source-map',
   entry: {
     app: './src/index.js'
@@ -22,7 +23,9 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../', 'dist'),
     filename: path.join('js', `${name}.js`),
-    publicPath: '/dist/'
+    publicPath: '/dist/',
+    libraryTarget: 'var',
+    library: 'FancyCheckout'
   },
   module: {
     rules: [

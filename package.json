@@ -2,7 +2,7 @@
   "name": "fancy-checkout",
   "version": "1.0.0",
   "description": "A animated experience for your desktop checkout!",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/dev.config.js",
     "build": "webpack --config ./webpack/prod.config.js --mode production"

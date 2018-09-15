@@ -1,7 +1,9 @@
 'use strict'
 
-// import scripts
-import './scripts'
-
-// import main
+import Checkout from './js/Checkout'
+import './js'
 import './scss/main.scss'
+
+export function init () {
+  new Checkout().submit()
+}
