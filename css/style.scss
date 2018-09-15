@@ -29,7 +29,6 @@ button:focus {
 }
 input{
     width:100%;
-    border:none;
 }
 h3{
     font-size:28px;
@@ -220,6 +219,10 @@ h3{
                 font-size:18px;
                 color:rgba(255,255,255,0.8);
                 background:rgba(255,255,255,0.15);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                &:focus{
+                    border-color: #4285f4;
+                }
             }
             i{
                 position:absolute;
