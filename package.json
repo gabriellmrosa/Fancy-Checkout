@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/dev.config.js",
     "build": "webpack --config ./webpack/prod.config.js --mode production",
-    "prepush": "npm run lint"
+    "precommit": "npm run build"
   },
   "keywords": [],
   "author": "",
