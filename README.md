@@ -13,7 +13,7 @@ Thanks!
 
 ## How to use
 
-open the [index.html](./index.html) file to see the full example
+Open the [index.html](./index.html) file to see the full example.
 
 ```html
 <!-- css assets -->
@@ -40,6 +40,12 @@ open the [index.html](./index.html) file to see the full example
   });
 </script>
 ```
+
+## To do
+
+- [ ] Add form validation
+- [ ] Webpack config refactor
+- [ ] Pre-push hook
 
 ## Contributing
 
