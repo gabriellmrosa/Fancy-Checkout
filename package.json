@@ -5,7 +5,8 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/dev.config.js",
-    "build": "webpack --config ./webpack/prod.config.js --mode production"
+    "build": "webpack --config ./webpack/prod.config.js --mode production",
+    "prepush": "npm run lint"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
