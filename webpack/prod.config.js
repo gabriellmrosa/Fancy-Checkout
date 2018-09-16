@@ -3,6 +3,7 @@
 const path = require('path')
 const common = require('./common')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const pathsToClean = ['dist']
 const cleanOptions = {
@@ -22,6 +23,12 @@ module.exports = {
     rules: [
       common.cssLoader,
       common.jsLoader
+    ]
+  },
+
+  optimization: {
+    minimizer: [
+      new OptimizeCSSAssetsPlugin({})
     ]
   },
 
