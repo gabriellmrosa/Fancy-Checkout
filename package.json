@@ -12,8 +12,11 @@
     "precommit": "npm run lint:fix && npm run build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Gabriel Lamas (http://www.gabriellamas.com.br)",
+  "contributors": [
+    "Eder Sampaio <edersampaio@outlook.com.br> (https://ederssouza.github.io)"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.0.1",
     "@babel/preset-env": "^7.0.0",
