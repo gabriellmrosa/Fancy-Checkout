@@ -44,7 +44,6 @@ Open the [index.html](./index.html) file to see the full example.
 ## To do
 
 - [ ] Add form validation
-- [ ] Webpack config refactor
 
 ## Contributing
 
