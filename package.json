@@ -4,7 +4,7 @@
   "description": "A animated experience for your desktop checkout!",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack/dev.config.js",
+    "start": "webpack-dev-server --config ./webpack/dev.config.js --open",
     "lint": "standard --verbose | snazzy",
     "lint:fix": "standard --fix",
     "lint:watch": "gulp",
