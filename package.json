@@ -7,6 +7,7 @@
     "start": "webpack-dev-server --config ./webpack/dev.config.js",
     "lint": "standard --verbose | snazzy",
     "lint:fix": "standard --fix",
+    "lint:watch": "gulp",
     "build": "webpack --config ./webpack/prod.config.js --mode production",
     "precommit": "npm run lint:fix && npm run build"
   },
@@ -19,6 +20,7 @@
     "babel-loader": "^8.0.2",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
+    "gulp": "^3.9.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^0.14.3",
     "mini-css-extract-plugin": "^0.4.2",
