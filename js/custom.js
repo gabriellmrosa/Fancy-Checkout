@@ -80,3 +80,15 @@ btnComprar.addEventListener('click', function () {
     }, false)
   }, false)
 })
+
+document.getElementsByClassName("numero-do-cartao-front")[0].onkeypress = function(e) {
+  if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+    return false;
+  }
+};
+
+document.getElementsByClassName("cvv")[0].onkeypress = function(e) {
+  if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+    return false;
+  }
+};
