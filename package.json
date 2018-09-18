@@ -1,23 +1,49 @@
 {
   "name": "fancy-checkout",
   "version": "1.0.0",
-  "description": "A animated experience for your desktop checkout !",
-  "main": "index.js",
+  "description": "A animated experience for your desktop checkout!",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch css/style.scss:css/style.css"
+    "start": "webpack-dev-server --config ./webpack/dev.config.js --open",
+    "lint": "standard --verbose | snazzy",
+    "lint:fix": "standard --fix",
+    "lint:watch": "gulp",
+    "build": "webpack --config ./webpack/prod.config.js --mode production",
+    "precommit": "npm run lint:fix && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gabriellamas/Fancy-Checkout.git"
-  },
+  "keywords": [],
+  "author": "Gabriel Lamas (http://www.gabriellamas.com.br)",
+  "contributors": [
+    "Eder Sampaio <edersampaio@outlook.com.br> (https://ederssouza.github.io)"
+  ],
+  "license": "MIT",
   "devDependencies": {
-    "sass": "^1.13.4"
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "gulp": "^3.9.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "snazzy": "^8.0.0",
+    "standard": "^12.0.1",
+    "style-loader": "^0.23.0",
+    "uglifyjs-webpack-plugin": "^2.0.0",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
   },
-  "author": "Gabriel Lamas",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gabriellamas/Fancy-Checkout/issues"
+  "dependencies": {
+    "@polvo-labs/card-type": "0.0.2"
   },
-  "homepage": "https://github.com/gabriellamas/Fancy-Checkout#readme"
+  "standard": {
+    "ignore": [
+      "dist/"
+    ]
+  }
 }
