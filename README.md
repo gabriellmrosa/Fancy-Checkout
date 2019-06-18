@@ -7,7 +7,9 @@ The first launch of a idea, be free to submit your improvements, let´s be open 
 
 A animated experience for your desktop checkout!
 
-You can see: [HERE](https://www.behance.net/gallery/69833603/FANCY-CHECKOUT)
+
+See in the browser, someone uploaded the project on cssscripts.com: [Click Here](https://www.cssscript.com/demo/fancy-animated-checkout-experience/) :D
+Project on behance here: [HERE](https://www.behance.net/gallery/69833603/FANCY-CHECKOUT)
 
 Thanks!
 
