@@ -9,6 +9,7 @@ A animated experience for your desktop checkout!
 
 
 See in the browser, someone uploaded the project on cssscripts.com: [Click Here](https://www.cssscript.com/demo/fancy-animated-checkout-experience/) :D
+
 Project on behance here: [HERE](https://www.behance.net/gallery/69833603/FANCY-CHECKOUT)
 
 Thanks!
