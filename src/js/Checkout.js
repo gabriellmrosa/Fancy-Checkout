@@ -58,7 +58,7 @@ class Checkout {
     })
 
     this.flipper.addEventListener('animationend', () => {
-      this.successFeedback.style.cssText = 'opacity:1; transform: translate(-50%, -100%);'
+      this.successFeedback.classList.add('confirmado')
     })
   }
 
