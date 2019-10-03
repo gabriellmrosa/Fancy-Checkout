@@ -139,6 +139,10 @@ h3 {
 .anima-flipper {
   animation: infiaMaquina 3s both ease;
 
+  @media screen and (max-width: 480px) {
+    animation: infiaMaquinaResponsivo 3s both ease;
+  }
+
   .cartao-front{
     animation: fadeOut 1s  both ease;
     @keyframes fadeOut {
@@ -209,6 +213,48 @@ h3 {
   }
 }
 
+@keyframes infiaMaquinaResponsivo {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translate(0%, 0%);
+    top:0%;
+    left:0%;
+  }
+
+  25% {
+    transform: rotateY(180deg) rotateX(0deg) rotateZ(0deg) translate(0%, 0%);
+    top:0%;
+    left:0%;
+  }
+
+  50% {
+    transform: rotateY(180deg) rotateX(0deg) rotateZ(90deg) translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    transform-origin: 53.5% 50%;
+    width:90%;
+  }
+
+  70% {
+    width:90%;
+  }
+
+  85% {
+    transform: rotateY(180deg) rotateX(0deg) rotateZ(90deg) translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    transform-origin: 53.5% 50%;
+    width:90%;
+  }
+
+  100% {
+    transform: rotateY(180deg) rotateX(0deg) rotateZ(90deg) translate(-110%, -50%);
+    top:50%;
+    left:50%;
+    transform-origin: 53.5% 50%;
+    width:90%;
+  }
+}
+
 .cartao {
   overflow: hidden;
   width:100%;
@@ -220,6 +266,10 @@ h3 {
   padding:35px 35px;
   border-radius:10px;
   box-shadow:0px 4px 8px rgba(0,0,0,0.25);
+
+  @media screen and (max-width: 480px) {
+    padding: 20px 35px;
+  }
 
   .header-cartao {
     margin-bottom:30px;
@@ -357,6 +407,15 @@ svg rect {
     transition: 300ms;
     width:90%;
     text-align: center;
+
+      &.confirmado {
+      transform: translate(-50%, -100%);
+      opacity: 1;
+
+      @media screen and (max-width: 480px) {
+        transform: translate(-50%, -80%);
+      }
+    }
 
     .compra-sucesso {
       background:#3AB245;
